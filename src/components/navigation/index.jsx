@@ -1,10 +1,10 @@
 import { useState, useRef } from "react";
-import { LogoBookmark } from "../logoBookmark";
+import { LogoBookmark } from "../LogoBookmark";
 import IconHamburger from "../../assets/icon-hamburger.svg";
 import IconClose from "../../assets/icon-close.svg";
 import IconFacebook from "../../assets/icon-facebook.svg";
 import IconTwitter from "../../assets/icon-twitter.svg";
-import { Button } from "../ui/button";
+import { Button } from "../ui/Button";
 
 export function Nav() {
   const items = ["features", "pricing", "contact"];
