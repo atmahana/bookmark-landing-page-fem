@@ -17,9 +17,9 @@ const Tabs = ({ tabs, className }) => {
               key={index}
               onClick={() => handleTabClick(index)}
               className={cn(
-                `px-5 py-4 lg:px-0 lg:py-6 text-[17px] lg:w-60 cursor-pointer hover:text-accent relative ${
+                `px-5 py-4 lg:px-0 lg:py-6 text-[17px] lg:w-60 cursor-pointer hover:text-accent ${
                   index === activeTab
-                    ? "after:content-[''] after:block after:w-[68%] lg:after:w-full after:h-1 after:absolute after:-bottom-[1px] after:left-1/2 after:-translate-x-1/2 after:bg-accent after:z-50 border-accent"
+                    ? "after:content-[''] after:block after:w-[68%] lg:after:w-full after:h-1 relative -z-10 after:absolute after:-bottom-[1px] after:left-1/2 after:-translate-x-1/2 after:bg-accent border-accent"
                     : "bg-none border-none text-secondary"
                 }`,
                 className

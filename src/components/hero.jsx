@@ -4,10 +4,10 @@ import { Button } from "./ui/Button";
 export function Hero() {
   return (
     <header
-      className="pt-[8.8rem] pb-[9.25rem] lg:pb-[7.5rem] md:pt-48 px-3 flex flex-col lg:flex-row-reverse overflow-hidden md:items-start"
+      className="pt-[8.8rem] pb-[9.25rem] lg:pb-[7.5rem] md:pt-48 px-3 2xl:px-36 flex flex-col lg:flex-row-reverse overflow-hidden md:items-start"
       role="banner"
     >
-      <div className="bg-primary w-full h-[12.7rem] sm:h-64 lg:h-[22rem] rounded-l-full absolute -z-10 translate-y-[3.5rem] sm:translate-y-20 lg:translate-y-[9rem] translate-x-[3.7rem] sm:translate-x-64 lg:translate-x-[65%] overflow-hidden select-none pointer-events-none"/>
+      <div className="bg-primary w-full h-[12.7rem] sm:h-64 lg:h-[22rem] rounded-l-full absolute -z-10 translate-y-[3.5rem] sm:translate-y-20 lg:translate-y-[9rem] translate-x-[3.7rem] sm:translate-x-64 lg:translate-x-[65%] 2xl:translate-x-[70%] overflow-hidden select-none pointer-events-none"/>
       {/* <div className="bg-primary w-5/6 h-[12.7rem] sm:h-64 rounded-l-full absolute -z-10 top-[12.3rem] left-[4.5rem] select-none pointer-events-none"/> */}
       <img
         src={HeroBackground}

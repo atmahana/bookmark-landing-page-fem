@@ -9,7 +9,7 @@ import { Button } from "../ui/Button";
 export function Nav() {
   const items = ["features", "pricing", "contact"];
   return (
-    <nav className="fixed w-full flex justify-between items-center px-6 py-10 lg:px-[10.25rem] lg:py-12">
+    <nav className="fixed w-full flex justify-between items-center px-6 py-10 lg:px-[10.25rem] 2xl:px-72 lg:py-12 backdrop-blur-md">
       <a href="/">
         <LogoBookmark isPrimary={true} className="ml-2" />
       </a>
