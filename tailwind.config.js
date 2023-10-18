@@ -33,6 +33,9 @@ export default {
         "-3%": "-0.03rem",
         "-3.5%": "-0.03938rem",
       },
+      backgroundImage: {
+        dots: "url('/src/assets/bg-dots.svg')",
+      },
     },
   },
   plugins: [],
