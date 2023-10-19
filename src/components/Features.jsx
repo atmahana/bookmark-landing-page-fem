@@ -42,7 +42,7 @@ export function Features() {
   return (
     <div>
       <H2>Features</H2>
-      <p className="text-secondary text-base md:text-lg leading-[1.55] -tracking-3% lg:tracking-normal max-w-[30ch] sm:max-w-[47ch] lg:max- mx-auto text-center mt-2.5 lg:mt-7 pb-10">
+      <p className="text-secondary text-base md:text-lg leading-[1.55] -tracking-3% lg:tracking-normal max-w-[30ch] sm:max-w-[50ch] lg:max-w-[47ch] mx-auto text-center mt-2.5 lg:mt-7 pb-10">
         Our aim is to make it quick and easy for you to access your favourite
         websites. Your bookmarks sync between your devices so you can access
         them on the go.

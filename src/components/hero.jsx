@@ -8,7 +8,6 @@ export function Hero() {
       role="banner"
     >
       <div className="bg-primary w-full h-[12.7rem] sm:h-64 lg:h-[22rem] rounded-l-full absolute -z-10 translate-y-[3.5rem] sm:translate-y-20 lg:translate-y-[9rem] translate-x-[3.7rem] sm:translate-x-64 lg:translate-x-[65%] 2xl:translate-x-[70%] overflow-hidden select-none pointer-events-none"/>
-      {/* <div className="bg-primary w-5/6 h-[12.7rem] sm:h-64 rounded-l-full absolute -z-10 top-[12.3rem] left-[4.5rem] select-none pointer-events-none"/> */}
       <img
         src={HeroBackground}
         alt="Hero section illustration"
