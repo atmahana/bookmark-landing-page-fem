@@ -34,13 +34,13 @@ export function FAQ() {
   };
 
   return (
-    <div className="mt-[8.6rem] sm:mt-[4.75rem] pb-20 px-8">
+    <section id="faq" className="mt-[8.6rem] sm:mt-[4.75rem] pb-[7.65rem] lg:pb-[9.5rem] px-8">
       <H2>Frequently Asked Questions</H2>
-      <p className="text-secondary -tracking-3.5% text-center mt-4 lg:mt-6 lg:max-w-[45ch] lg:text-lg lg:tracking-normal mx-auto">
+      <p className="text-secondary -tracking-3.5% text-center mt-4 lg:mt-6 sm:max-w-[45ch] lg:text-lg lg:tracking-normal mx-auto">
         Here are some of our FAQs. If you have any other questions you’d like
         answered please feel free to email us.
       </p>
-      <div className="mt-10 pt-1.5 lg:pt-5 lg:max-w-[33.5rem] mx-auto">
+      <div className="mt-10 pt-1.5 lg:pt-5 sm:max-w-[536px] mx-auto">
         {items.map((item, index) => {
           let isOpen = openAccordion === index;
           return (
@@ -52,7 +52,7 @@ export function FAQ() {
             >
               <summary className="list-none">
                 <button
-                  className="text-2sm lg:text-lg w-full text-start pt-5 pb-6 lg:pb-3.5 lg:pr-5 flex justify-between items-center hover:text-accent"
+                  className="text-2sm lg:text-lg w-full text-start pt-5 pb-6 lg:pb-[1.125rem] lg:pr-5 flex justify-between items-center hover:text-accent"
                   onClick={() => handleAccordionClick(index)}
                 >
                   {item.question}
@@ -73,11 +73,11 @@ export function FAQ() {
           );
         })}
       </div>
-      <div className="grid place-content-center mt-9 lg:mt-14">
+      <div className="grid place-content-center mt-9 lg:mt-[3.25rem]">
         <Button isMain className="bg-primary hover:ring-2 ring-primary hover:text-primary text-sm py-3.5 px-6">
           More Info
         </Button>
       </div>
-    </div>
+    </section>
   );
 }

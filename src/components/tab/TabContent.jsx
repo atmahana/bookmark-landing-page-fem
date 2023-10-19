@@ -7,7 +7,10 @@ export function TabContent({ title, description, img }) {
       <div>
         <div className="bg-primary w-full h-[12.7rem] sm:h-56 lg:h-[22rem] 2xl:h-[25rem] rounded-r-full absolute -z-10 translate-y-[2.1rem] sm:translate-y-16 lg:translate-y-[5.5rem] -translate-x-[5rem] sm:-translate-x-64 lg:-translate-x-[56.25%] 2xl:-translate-x-[69%] overflow-hidden select-none pointer-events-none" />
         {/* w-[89%] sm:w-1/2 lg:w-[76%] */}
-        <img className="h-[12.5rem] sm:h-64 lg:h-[21.7rem] mx-auto lg:mx-0 lg:ml-auto lg:mt-1.5 lg:mr-3.5" src={img} />
+        <img
+          className="h-[12.5rem] sm:h-64 lg:h-[21.7rem] mx-auto lg:mx-0 lg:ml-auto lg:mt-1.5 lg:mr-3.5"
+          src={img}
+        />
       </div>
       <div className="text-center lg:text-start py-10 lg:px-[6.8rem] lg:py-[4.5rem] lg:space-y-7">
         <H2 className="lg:text-start">{title}</H2>
@@ -16,7 +19,7 @@ export function TabContent({ title, description, img }) {
         </p>
         <Button
           isMain
-          className="bg-primary lg:text-sm hidden lg:block hover:ring-2 ring-primary hover:text-primary"
+          className="bg-primary lg:text-sm hidden lg:block hover:ring-2 ring-primary hover:text-primary px-7 py-4"
         >
           More Info
         </Button>

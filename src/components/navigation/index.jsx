@@ -9,9 +9,9 @@ import { Button } from "../ui/Button";
 export function Nav() {
   const items = ["features", "pricing", "contact"];
   return (
-    <nav className="fixed w-full flex justify-between items-center px-6 py-10 lg:px-[10.25rem] 2xl:px-72 lg:py-12 backdrop-blur-md z-50">
+    <nav className="fixed w-full flex justify-between items-center px-6 py-10 lg:px-[10.25rem] 2xl:px-72 lg:py-12 sm:backdrop-blur-md z-50">
       <a href="/">
-        <LogoBookmark isPrimary={true} className="ml-2" />
+        <LogoBookmark isPrimary={true} textColor="#242A45" className="ml-2" />
       </a>
       <Desktop items={items} />
       <Mobile items={items} />
@@ -29,7 +29,7 @@ function Desktop({ items }) {
           </button>
         </li>
       ))}
-      <Button className="bg-accent hover:ring-2 ring-accent hover:text-accent ml-1.5 uppercase">
+      <Button className="bg-accent hover:ring-2 ring-accent hover:text-accent ml-1.5 uppercase px-9 py-2.5">
         Login
       </Button>
     </ul>
@@ -62,6 +62,7 @@ function Mobile({ items }) {
       >
         <LogoBookmark
           isPrimary={false}
+          textColor="#FFFF"
           className="h-fit w-full z-50 border-b border-secondary/50 pb-3"
         />
         <ul className="flex flex-col text-xl text-center">
@@ -76,7 +77,7 @@ function Mobile({ items }) {
             </li>
           ))}
         </ul>
-        <Button className="border-2 mt-6 text-xl uppercase">Login</Button>
+        <Button className="border-2 mt-6 text-xl uppercase py-2 tracking-widest">Login</Button>
         <div className="w-full flex justify-center gap-10 mt-auto">
           <a href="/">
             <img src={IconFacebook} />
