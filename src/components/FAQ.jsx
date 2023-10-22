@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from "framer-motion";
 import { Button } from "./ui/Button";
 import { H2 } from "./ui/H2";
 import { useState } from "react";
@@ -34,7 +35,10 @@ export function FAQ() {
   };
 
   return (
-    <section id="faq" className="mt-[8.6rem] sm:mt-[4.75rem] pb-[7.65rem] lg:pb-[9.5rem] px-8">
+    <section
+      id="faq"
+      className="mt-[8.6rem] sm:mt-[4.75rem] pb-[7.65rem] lg:pb-[9.5rem] px-8"
+    >
       <H2>Frequently Asked Questions</H2>
       <p className="text-secondary -tracking-3.5% text-center mt-4 lg:mt-6 sm:max-w-[45ch] lg:text-lg lg:tracking-normal mx-auto">
         Here are some of our FAQs. If you have any other questions you’d like
@@ -44,7 +48,11 @@ export function FAQ() {
         {items.map((item, index) => {
           let isOpen = openAccordion === index;
           return (
-            <details
+            <motion.details
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              viewport={{ once: true }}
               key={index}
               open={isOpen}
               onClick={(e) => e.preventDefault()}
@@ -66,15 +74,29 @@ export function FAQ() {
                   </span>
                 </button>
               </summary>
-              <p className="text-secondary text-2sm lg:text-base pt-2 lg:pt-4 pb-8 leading-loose lg:leading-9">
-                {item.answer}
-              </p>
-            </details>
+              {isOpen ? (
+                <AnimatePresence mode="wait">
+                  <motion.p
+                    key={isOpen ? index : 0}
+                    initial={{ y: -20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    exit={{ y: 20, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                    className="text-secondary text-2sm lg:text-base pt-2 lg:pt-4 pb-8 leading-loose lg:leading-9"
+                  >
+                    {item.answer}
+                  </motion.p>
+                </AnimatePresence>
+              ) : null}
+            </motion.details>
           );
         })}
       </div>
       <div className="grid place-content-center mt-9 lg:mt-[3.25rem]">
-        <Button isMain className="bg-primary hover:ring-2 ring-primary hover:text-primary text-sm py-3.5 px-6">
+        <Button
+          isMain
+          className="bg-primary hover:ring-2 ring-primary hover:text-primary text-sm py-3.5 px-6"
+        >
           More Info
         </Button>
       </div>

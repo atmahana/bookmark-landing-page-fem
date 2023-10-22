@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "../../lib/utils";
 
 const Tabs = ({ tabs, className }) => {
@@ -10,27 +11,40 @@ const Tabs = ({ tabs, className }) => {
 
   return (
     <div className="w-full mx-auto">
-      <div className="flex flex-col md:flex-row sm:gap-12 lg:gap-0 justify-center text-center">
+      <div className="flex flex-col md:flex-row lg:gap-0 justify-center text-center [&>*:nth-child(3)]:border-b">
         {tabs.map((tab, index) => (
           <div key={index} className="border-t sm:border-none">
             <button
-              key={index}
+              key={tab.title}
               onClick={() => handleTabClick(index)}
               className={cn(
-                `relative px-5 py-4 lg:px-0 lg:py-6 text-[17px] lg:w-60 cursor-pointer hover:text-accent ${
-                  index === activeTab
-                    ? "after:content-[''] after:block after:w-[68%] lg:after:w-full after:h-1 after:absolute after:-bottom-[1px] after:left-1/2 after:-translate-x-1/2 after:bg-accent border-accent"
-                    : "bg-none border-none text-secondary"
-                }`,
+                "relative px-5 py-4 sm:px-8 lg:px-0 lg:py-6 text-[17px] lg:w-60 cursor-pointer hover:text-accent bg-none border-none text-secondary",
                 className
               )}
             >
               {tab.title}
+              {index === activeTab ? (
+                <motion.div
+                  layoutId="underline"
+                  className="w-[100%] sm:w-full h-1 absolute bottom-0 left-0 bg-accent border-accent"
+                />
+              ) : null}
             </button>
           </div>
         ))}
       </div>
-      <div className="p-3">{tabs[activeTab].content}</div>
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={activeTab ? tabs[activeTab].title : "empty"}
+          initial={{ y: 10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: -10, opacity: 0 }}
+          transition={{ duration: 0.15 }}
+          className="p-3"
+        >
+          {tabs[activeTab].content}
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 };
