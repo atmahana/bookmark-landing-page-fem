@@ -75,18 +75,15 @@ export function FAQ() {
                 </button>
               </summary>
               {isOpen ? (
-                <AnimatePresence mode="wait">
-                  <motion.p
-                    key={isOpen ? index : 0}
-                    initial={{ y: -20, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    exit={{ y: 20, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                    className="text-secondary text-2sm lg:text-base pt-2 lg:pt-4 pb-8 leading-loose lg:leading-9"
-                  >
-                    {item.answer}
-                  </motion.p>
-                </AnimatePresence>
+                <motion.p
+                  key={isOpen ? index : 0}
+                  initial={{ y: -20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.2 }}
+                  className="text-secondary text-2sm lg:text-base pt-2 lg:pt-4 pb-8 leading-loose lg:leading-9 outline"
+                >
+                  {item.answer}
+                </motion.p>
               ) : null}
             </motion.details>
           );

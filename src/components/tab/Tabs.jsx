@@ -36,9 +36,9 @@ const Tabs = ({ tabs, className }) => {
       <AnimatePresence mode="wait">
         <motion.div
           key={activeTab ? tabs[activeTab].title : "empty"}
-          initial={{ y: 10, opacity: 0 }}
+          initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          exit={{ y: -10, opacity: 0 }}
+          exit={{ y: -20, opacity: 0 }}
           transition={{ duration: 0.15 }}
           className="p-3"
         >

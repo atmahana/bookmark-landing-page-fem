@@ -31,7 +31,8 @@ export function Nav() {
   const items = ["features", "pricing", "contact"];
   return (
     <motion.nav
-      layoutId="navbar"
+      layout
+      transition={{ ease: [0, 0.55, 0.45, 1], duration: 0.2 }}
       className={`fixed w-full flex justify-between items-center px-6 py-10 lg:px-[10.25rem] 2xl:px-72 sm:bg-white z-50 ${
         isScrolling ? "lg:py-4 sm:shadow-sm" : "lg:py-12"
       }`}
