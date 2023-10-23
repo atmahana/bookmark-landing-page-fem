@@ -35,6 +35,8 @@ export function Hero() {
       <img
         src={HeroBackground}
         alt="Hero section illustration"
+        width={640}
+        height={360}
         className="pb-[3.75rem] sm:pb-8 md:pb-0 w-fit sm:w-2/3 lg:w-fit sm:mx-auto lg:mr-10"
       />
       <motion.div

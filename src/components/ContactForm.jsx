@@ -46,6 +46,8 @@ export function ContactForm() {
           {isError ? (
             <img
               src={IconError}
+              width={20}
+              height={20}
               className="absolute z-20 bottom-1/2 translate-y-1/2 right-0 pr-4"
             />
           ) : null}

@@ -19,15 +19,15 @@ export function Footer() {
           </a>
         </div>
         <div className="flex gap-10 pt-3 lg:pt-0 lg:ml-auto">
-          <a href="/" aria-label="">
+          <a href="/" aria-label="Facebook">
             <IconFacebook />
           </a>
-          <a href="/" aria-label="">
+          <a href="/" aria-label="Twitter">
             <IconTwitter />
           </a>
         </div>
       </div>
-      <p className="text-center text-sm max-w-[25ch] mx-auto text-white pb-5">
+      <p className="text-center text-sm max-w-[25ch] lg:max-w-full mx-auto text-white pb-5">
         Challenge by{" "}
         <a
           href="https://www.frontendmentor.io/challenges/bookmark-landing-page-5d0b588a9edda32581d29158/hub"

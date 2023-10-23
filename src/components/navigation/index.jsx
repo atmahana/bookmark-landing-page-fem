@@ -37,7 +37,7 @@ export function Nav() {
         isScrolling ? "lg:py-4 sm:shadow-sm" : "lg:py-12"
       }`}
     >
-      <a href="/">
+      <a href="/" aria-label="Bookmark home page">
         <LogoBookmark isPrimary={true} textColor="#242A45" className="ml-2" />
       </a>
       <Desktop items={items} />
@@ -56,9 +56,11 @@ function Desktop({ items }) {
           </button>
         </li>
       ))}
-      <Button className="bg-accent hover:ring-2 ring-accent hover:text-accent ml-1.5 uppercase px-9 py-2.5">
-        Login
-      </Button>
+      <li>
+        <Button className="bg-accent hover:ring-2 ring-accent hover:text-accent ml-1.5 uppercase px-9 py-2.5">
+          Login
+        </Button>
+      </li>
     </ul>
   );
 }
@@ -94,7 +96,7 @@ function Mobile({ items }) {
   return (
     <>
       <label htmlFor="hamburger-menu" className="z-50 mr-2 md:hidden">
-        <img src={`${isOpen ? IconClose : IconHamburger}`} />
+        <img width={18} height={18} src={`${isOpen ? IconClose : IconHamburger}`} aria-label="mobile navigation menu"/>
       </label>
       <input
         ref={hamburgerRef}
@@ -133,11 +135,11 @@ function Mobile({ items }) {
               Login
             </Button>
             <div className="w-full flex justify-center gap-10 mt-auto">
-              <a href="/">
-                <img src={IconFacebook} />
+              <a href="/" aria-label="Facebook">
+                <img width={24} height={24} src={IconFacebook} />
               </a>
               <a href="/">
-                <img src={IconTwitter} />
+                <img width={24} height={24} src={IconTwitter} aria-label="Twitter" />
               </a>
             </div>
           </motion.div>

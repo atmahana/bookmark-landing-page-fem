@@ -60,7 +60,7 @@ export function Extensions() {
             style={{ transform: `translateY(${index * 2.5}rem)` }}
             className="grid rounded-xl justify-center pt-10 pb-6 px-5 lg:px-6 max-w-[480px] mx-auto shadow-lg shadow-primary/10 bg-dots bg-no-repeat sm:bg-repeat-x bg-[center_16.5rem]"
           >
-            <img src={item.logo} className="mx-auto" />
+            <img width={110} height={110} src={item.logo} className="mx-auto" alt={`${item.name} logo`}/>
             <h3 className="font-medium text-xl mt-7 lg:mt-8">
               Add to {item.name}
             </h3>
