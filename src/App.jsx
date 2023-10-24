@@ -1,10 +1,10 @@
-import { Nav } from "./components/navigation/Index";
-import { Hero } from "./components/Hero";
-import { Features } from "./components/Features";
-import { Extensions } from "./components/Extensions";
-import { FAQ } from "./components/FAQ";
-import { ContactForm } from "./components/ContactForm";
-import { Footer } from "./components/Footer";
+import { Nav } from "./components/navigation/Index.jsx";
+import { Hero } from "./components/Hero.jsx";
+import { Features } from "./components/Features.jsx";
+import { Extensions } from "./components/Extensions.jsx";
+import { FAQ } from "./components/FAQ.jsx";
+import { ContactForm } from "./components/ContactForm.jsx";
+import { Footer } from "./components/Footer.jsx";
 
 export default function App() {
   return (
