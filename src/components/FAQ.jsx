@@ -80,7 +80,7 @@ export function FAQ() {
                   initial={{ y: -20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.2 }}
-                  className="text-secondary text-2sm lg:text-base pt-2 lg:pt-4 pb-8 leading-loose lg:leading-9 outline"
+                  className="text-secondary text-2sm lg:text-base pt-2 lg:pt-4 pb-8 leading-loose lg:leading-9"
                 >
                   {item.answer}
                 </motion.p>
